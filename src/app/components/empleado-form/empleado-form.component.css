@@ -1,0 +1,336 @@
+/* Contenido del formulario*/
+.container.mt-4:has(.card) {
+  padding: 24px !important;
+  background: transparent;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+/* Tarjeta principal */
+.card.shadow-sm {
+  max-width: 650px !important;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 32px !important;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  overflow: hidden;
+  animation: slideUpFade 0.4s ease-out;
+}
+
+/* Header de la tarjeta */
+.card-header {
+  background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+  padding: 24px 28px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo en el header */
+.card-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0.5;
+  animation: shine 8s infinite linear;
+}
+
+.card-header h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: white;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* cuerpo del formulario*/
+.card-body {
+  padding: 32px !important;
+  background: transparent;
+}
+
+.form-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+  display: block;
+}
+
+/* Campos de texto*/
+.form-control {
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(203, 213, 225, 0.6) !important;
+  border-radius: 20px !important;
+  padding: 14px 18px !important;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.02),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease !important;
+}
+
+.form-control:focus {
+  border-color: #3498db !important;
+  box-shadow:
+    0 0 0 4px rgba(52, 152, 219, 0.1),
+    inset 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+  outline: none;
+  background: white !important;
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.form-select {
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(203, 213, 225, 0.6) !important;
+  border-radius: 20px !important;
+  padding: 14px 18px !important;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233498db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.02),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease !important;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  border-color: #3498db !important;
+  box-shadow:
+    0 0 0 4px rgba(52, 152, 219, 0.1),
+    inset 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+  outline: none;
+  background-color: white !important;
+}
+
+/* Opciones del select */
+.form-select option {
+  padding: 12px;
+  background: white;
+  color: #0f172a;
+}
+
+.form-select option:disabled {
+  color: #94a3b8;
+}
+
+.d-flex.justify-content-end {
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Botón Cancelar */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(203, 213, 225, 0.5) !important;
+  color: #475569 !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 12px 28px !important;
+  border-radius: 40px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease !important;
+  letter-spacing: 0.01em;
+}
+
+.btn-secondary:hover {
+  background: white !important;
+  border-color: #cbd5e1 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  color: #0f172a !important;
+}
+
+/* Botón Guardar/Actualizar */
+.btn-success {
+  background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+  border: none !important;
+  color: white !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 32px !important;
+  border-radius: 40px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(52, 152, 219, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease !important;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 20px -5px rgba(52, 152, 219, 0.4),
+    0 4px 8px -2px rgba(0, 0, 0, 0.05);
+  filter: brightness(1.05);
+}
+
+.btn-success:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #94a3b8, #64748b) !important;
+  box-shadow: none;
+}
+
+/* Efecto de onda en el botón guardar */
+.btn-success::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.btn-success:hover:not(:disabled)::after {
+  width: 200px;
+  height: 200px;
+}
+
+.mb-3, .mb-4 {
+  margin-bottom: 24px !important;
+}
+
+.ng-invalid.ng-touched {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.02) !important;
+}
+
+.ng-valid.ng-touched {
+  border-color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.02) !important;
+}
+
+/* Mensaje de error */
+.invalid-feedback {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #ef4444;
+  margin-top: 6px;
+  padding-left: 4px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container.mt-4:has(.card) {
+    padding: 16px !important;
+    align-items: flex-start;
+  }
+
+  .card-header {
+    padding: 20px 24px !important;
+  }
+
+  .card-header h4 {
+    font-size: 1.3rem;
+  }
+
+  .card-body {
+    padding: 24px !important;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 12px 16px !important;
+    font-size: 0.9rem;
+  }
+
+  .btn-secondary,
+  .btn-success {
+    padding: 10px 24px !important;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-header {
+    padding: 18px 20px !important;
+  }
+
+  .card-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .card-body {
+    padding: 20px !important;
+  }
+
+  .d-flex.justify-content-end {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-secondary,
+  .btn-success {
+    width: 100%;
+    padding: 12px !important;
+    text-align: center;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 10px 14px !important;
+    font-size: 0.85rem;
+  }
+}
+
+/* animaciones */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

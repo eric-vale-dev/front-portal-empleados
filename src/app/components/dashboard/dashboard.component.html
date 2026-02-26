@@ -1,0 +1,78 @@
+<div class="dashboard-container">
+  <h2 class="titulo-seccion">Resumen del Sistema</h2>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-icono" style="background-color: #e0f2fe; color: #0284c7;">
+        <i class="bi bi-people-fill"></i>
+      </div>
+      <div class="kpi-info">
+        <h3>Total Empleados</h3>
+        <p class="numero">{{ datosDashboard().kpis.total }}</p>
+      </div>
+    </div>
+
+    <div class="kpi-card">
+      <div class="kpi-icono" style="background-color: #dcfce7; color: #16a34a;">
+        <i class="bi bi-check-circle-fill"></i>
+      </div>
+
+      <div class="kpi-info">
+        <h3>Activos</h3>
+        <p class="numero">{{ datosDashboard().kpis.activos }}</p>
+      </div>
+    </div>
+
+    <div class="kpi-card">
+      <div class="kpi-icono" style="background-color: #fee2e2; color: #dc2626;">
+        <i class="bi bi-slash-circle-fill"></i>
+      </div>
+      <div class="kpi-info">
+        <h3>Inactivos</h3>
+        <p class="numero">{{ datosDashboard().kpis.inactivos }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenido-grid">
+
+    <div class="panel">
+      <h3>Últimos Registros</h3>
+      <table class="mi-tabla table table-striped"> <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Departamento</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (registro of datosDashboard().ultimos; track registro.nombre) {
+            <tr>
+              <td>{{ registro.nombre }}</td>
+              <td>{{ registro.departamento }}</td>
+              <td>
+                @if (registro.estado == 1) {
+                  <span class="badge bg-success">Activo</span>
+                } @else {
+                  <span class="badge bg-danger">Inactivo</span>
+                }
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="3" class="text-center">No hay registros recientes.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h3>Distribución por Departamentos</h3>
+      <div class="grafica-placeholder" style="position: relative; height: 300px; width: 100%;">
+        <canvas id="canvasPastel"></canvas>
+      </div>
+    </div>
+
+  </div>
+</div>

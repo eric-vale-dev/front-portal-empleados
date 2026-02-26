@@ -1,59 +1,38 @@
-# PortalEmpleados
+# 💻 Frontend Angular - Portal de Empleados
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+**Descripción del Proyecto**
+Este repositorio contiene el Frontend de una Single Page Application (SPA) desarrollada con **Angular 19**. Forma parte de un sistema integral de gestión de empleados, diseñado para consumir una API RESTful construida en PHP y MySQL.
 
-## Development server
+El proyecto destaca por utilizar las características más modernas del framework, prescindiendo de módulos tradicionales (`app.module.ts`) en favor de **Componentes Standalone**, manejo de estado reactivo con **Signals** y la nueva sintaxis de control de flujo (`@for`, `@if`).
 
-To start a local development server, run:
+## 🚀 Tecnologías Utilizadas
 
+* **Framework:** Angular 19
+* **Lenguaje:** TypeScript
+* **Estilos:** Bootstrap 5 (CSS)
+* **Gráficas:** Chart.js
+* **Exportación de Datos:** SheetJS (`xlsx`) y jsPDF (`jspdf`, `jspdf-autotable`)
+* **Arquitectura:** Componentes Standalone y Servicios Inyectables (`inject()`)
+
+## ✨ Características Principales
+
+1. **Dashboard Interactivo:** Panel principal con KPIs (métricas clave) y una gráfica de pastel renderizada en tiempo real con Chart.js, alimentada por datos estadísticos del backend.
+2. **Gestión de Empleados (CRUD):** Interfaz para listar, agregar, editar y dar de baja (lógica) a los empleados del sistema.
+3. **Formularios Dinámicos:** Menús desplegables (`<select>`) alimentados directamente desde la base de datos (Catálogos de Departamentos y Puestos).
+4. **Generación de Reportes:** Funcionalidad nativa en el navegador para exportar la tabla de empleados a formatos **Excel (.xlsx)** y **PDF** con un solo clic.
+5. **Enrutamiento (Router):** Navegación fluida entre pantallas (Dashboard, Lista, Formulario) sin recargar la página.
+
+## 🛠️ Requisitos Previos
+
+Asegúrate de tener instalado en tu entorno local:
+* **Node.js** (v18 o superior recomendado)
+* **Angular CLI** (`npm install -g @angular/cli`)
+
+## ⚙️ Instalación y Despliegue Local
+
+Sigue estos pasos para correr el proyecto en tu máquina (ej. Fedora/Linux, Windows o macOS):
+
+### 1. Clonar el repositorio
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone [https://github.com/tu-usuario/tu-repositorio-frontend.git](https://github.com/tu-usuario/tu-repositorio-frontend.git)
+cd tu-repositorio-frontend

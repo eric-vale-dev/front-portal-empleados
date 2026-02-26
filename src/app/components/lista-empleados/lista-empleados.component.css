@@ -1,0 +1,301 @@
+.container.mt-4 {
+  padding: 24px !important;
+  background: transparent;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header y botones */
+.d-flex.justify-content-between.align-items-center {
+  margin-bottom: 28px !important;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.d-flex h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 0 !important;
+}
+
+.d-flex h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+  border-radius: 2px;
+}
+
+/* Botones de exportacion*/
+.btn-outline-success,
+.btn-outline-danger {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(203, 213, 225, 0.5) !important;
+  background: white !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline-success {
+  color: #0f172a !important;
+}
+
+.btn-outline-danger {
+  color: #0f172a !important;
+}
+
+.btn-outline-success:hover {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border-color: transparent !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+}
+
+.btn-outline-danger:hover {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  border-color: transparent !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.2);
+}
+
+
+.btn i {
+  font-size: 1.1rem;
+}
+
+/* Tabla */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-top: 20px !important;
+  font-family: 'Inter', sans-serif;
+}
+
+.table thead {
+  background: transparent !important;
+}
+
+.table thead tr {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 16px !important;
+}
+
+.table thead th {
+  background: transparent !important;
+  border: none !important;
+  padding: 16px 20px !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.3) !important;
+}
+
+.table tbody tr {
+  background: white;
+  border-radius: 16px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.05),
+    0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  background: white;
+}
+
+.table tbody td {
+  padding: 18px 20px !important;
+  border: none !important;
+  font-size: 0.95rem;
+  color: #334155;
+  vertical-align: middle;
+  background: transparent !important;
+}
+
+.table tbody tr td:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.table tbody tr td:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* Botones de accion  */
+.btn-warning,
+.btn-danger {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem !important;
+  padding: 8px 16px !important;
+  border-radius: 30px !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: white !important;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(245, 158, 11, 0.2);
+  filter: brightness(1.05);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: white !important;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.2);
+  filter: brightness(1.05);
+}
+
+/* Espacio entre botones */
+.me-2 {
+  margin-right: 10px !important;
+}
+
+/* Mensaje cuando no haya empleados  */
+.text-center[colspan="6"] {
+  padding: 40px !important;
+  font-size: 1rem;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  font-weight: 500;
+}
+
+/* Responsive  */
+@media screen and (max-width: 992px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .d-flex div:last-child {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-outline-success,
+  .btn-outline-danger {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container.mt-4 {
+    padding: 16px !important;
+  }
+
+  .d-flex h2 {
+    font-size: 1.5rem;
+  }
+
+  .d-flex h2::after {
+    width: 50px;
+  }
+
+  /* Hacemos la tabla scroll horizontal */
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .table tbody tr td {
+    padding: 14px 16px !important;
+  }
+
+  .btn-warning,
+  .btn-danger {
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .d-flex div:last-child {
+    flex-direction: column;
+  }
+
+  .btn-outline-success,
+  .btn-outline-danger {
+    width: 100%;
+  }
+
+  .table tbody tr td {
+    padding: 12px !important;
+  }
+
+  .btn-warning,
+  .btn-danger {
+    padding: 6px 10px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .text-center[colspan="6"] {
+    padding: 30px 15px !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* animaciones */
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.table tbody tr {
+  animation: fadeInRow 0.3s ease-out forwards;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.15s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(5) { animation-delay: 0.25s; }
