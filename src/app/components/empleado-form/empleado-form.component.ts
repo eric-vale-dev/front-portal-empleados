@@ -27,6 +27,12 @@ export class EmpleadoFormComponent implements OnInit {
     puesto_id: 0
   };
 
+  // Validar que en el nombre solo acepte letras
+  soloLetras(event: KeyboardEvent): boolean{
+    const pattern = /[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/;
+    return pattern.test(event.key)
+  }
+
   esEdicion = false;
 
   ngOnInit(): void {

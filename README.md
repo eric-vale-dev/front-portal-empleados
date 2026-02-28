@@ -14,7 +14,7 @@ El proyecto destaca por utilizar las características más modernas del framewor
 * **Exportación de Datos:** SheetJS (`xlsx`) y jsPDF (`jspdf`, `jspdf-autotable`)
 * **Arquitectura:** Componentes Standalone y Servicios Inyectables (`inject()`)
 
-## ✨ Características Principales
+##  Características Principales
 
 1. **Dashboard Interactivo:** Panel principal con KPIs (métricas clave) y una gráfica de pastel renderizada en tiempo real con Chart.js, alimentada por datos estadísticos del backend.
 2. **Gestión de Empleados (CRUD):** Interfaz para listar, agregar, editar y dar de baja (lógica) a los empleados del sistema.
@@ -28,11 +28,4 @@ Asegúrate de tener instalado en tu entorno local:
 * **Node.js** (v18 o superior recomendado)
 * **Angular CLI** (`npm install -g @angular/cli`)
 
-## ⚙️ Instalación y Despliegue Local
-
-Sigue estos pasos para correr el proyecto en tu máquina (ej. Fedora/Linux, Windows o macOS):
-
-### 1. Clonar el repositorio
-```bash
-git clone [https://github.com/tu-usuario/tu-repositorio-frontend.git](https://github.com/tu-usuario/tu-repositorio-frontend.git)
-cd tu-repositorio-frontend
+## Desarrollado por Eric Valera
