@@ -30,7 +30,7 @@
   border-radius: 2px;
 }
 
-/* --- TARJETAS KPI - VERSIÓN PREMIUM --- */
+/* Tarjeta KPI --- */
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -99,10 +99,10 @@
   letter-spacing: -0.02em;
 }
 
-/* --- CONTENEDOR DE PANELES --- */
+/* Contenedor de paneles */
 .contenido-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax((100%, 350px), 1fr));
   gap: 24px;
 }
 
@@ -148,7 +148,7 @@
   margin-right: 10px;
 }
 
-/* --- ESTILOS DE LA TABLA MEJORADOS --- */
+/* Estilos de tabla */
 .mi-tabla {
   width: 100%;
   border-collapse: separate;
@@ -188,7 +188,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* --- BADGES MEJORADOS --- */
 .badge {
   padding: 6px 12px;
   border-radius: 30px;
@@ -212,7 +211,7 @@
   border: 1px solid rgba(220, 38, 38, 0.2);
 }
 
-/* --- GRÁFICA PLACEHOLDER MEJORADA --- */
+/* Gráfica */
 .grafica-placeholder {
   background: linear-gradient(135deg, #f8fafc, #f1f5f9);
   border-radius: 16px;
@@ -227,7 +226,7 @@
   margin: 0;
 }
 
-/* --- ANIMACIONES ADICIONALES --- */
+/* Animaciones */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -249,9 +248,7 @@
 .panel:nth-child(1) { animation-delay: 0.4s; }
 .panel:nth-child(2) { animation-delay: 0.5s; }
 
-/* --- MEJORAS RESPONSIVAS --- */
-
-/* Tablets (pantallas medianas) */
+/* Responsive*/
 @media screen and (max-width: 1024px) {
   .dashboard-container {
     padding: 20px;
@@ -276,7 +273,6 @@
   }
 }
 
-/* Tablets pequeñas y celulares grandes */
 @media screen and (max-width: 768px) {
   .dashboard-container {
     padding: 16px;
@@ -349,7 +345,7 @@
   }
 
   .kpi-grid {
-    grid-template-columns: 1fr; /* Fuerza una columna */
+    grid-template-columns: 1fr;
   }
 
   .kpi-card {
@@ -367,7 +363,7 @@
   }
 
   .contenido-grid {
-    grid-template-columns: 1fr; /* Fuerza una columna */
+    grid-template-columns: 1fr;
   }
 
   .panel {
@@ -401,10 +397,10 @@
   }
 
   .kpi-grid {
-    grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas fijas */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .contenido-grid {
-    grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas fijas */
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -48,4 +48,14 @@ export class EmpleadoService {
   obtenerDashboard(): Observable<any>{
     return this.http.get<any>(`${this.urlApi}/obtener_dashboard.php`);
   }
+
+  //Traer a los empleados dados de baja
+  obtenerInactivos(): Observable<Empleado[]>{
+    return this.http.get<Empleado[]>(`${this.urlApi}/obtener_inactivos.php`);
+  }
+
+  //Volver a activar a un empleado
+  reactivarEmpleado(id: number): Observable<any>{
+    return this.http.put(`${this.urlApi}/reactivar_empleado.php?id=${id}`, {});
+  }
 }
